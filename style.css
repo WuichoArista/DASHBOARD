@@ -1,0 +1,121 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.contenedor_principal{
+    display: flex;
+}
+
+
+/*Menu lateral*/
+
+.menu_lateral{
+    background-color: rgb(156, 18, 18);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    overflow-y: hidden;
+    min-width: 250px;
+}
+
+
+.menu_lateral_titulo{
+    width: 90%;
+}
+
+.menu_lateral_titulo h2{
+    color: white;
+    width: 90%;
+    margin: 15px auto;
+
+}
+
+.menu_lateral_buscador{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.buscador{
+  padding: 5px; 
+  width: 90%; 
+  color: rgb(156, 18, 18);
+  font-weight: bold;
+}
+
+.boton{
+    padding: 5px 20px;
+    background-color: blue;
+    color: white;
+    border: 1px solid white;
+    margin: 15px 0;
+}
+
+
+
+/*datos*/
+
+.informacion{
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contenedor_imagenes{
+    padding: 15px;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    background-color: rgb(233, 108, 108);
+    border-radius: 5px;
+}
+
+.contenedor_pokeNombre{
+    width: 50%;
+}
+
+.pokeNombre{
+    color: white;
+}
+
+.contenedor_pokeImagen{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: rgb(39, 39, 39);
+    border-radius: 5px;
+
+}
+.pokeImagen{
+    width: 200px;
+    height: auto;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.contenedor_graficas{
+    padding: 15px;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    background-color: rgb(233, 108, 108);
+    border-radius: 5px;
+}
+
+
+.contenedor_grafica_uno{
+    width: 400px;
+    height: auto;
+    background-color: white;
+    color: white;
+}
