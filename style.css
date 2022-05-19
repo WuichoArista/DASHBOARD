@@ -5,6 +5,9 @@ body{
 
 .contenedor_principal{
     display: flex;
+    max-width: 96rem;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
 }
 
 
@@ -14,7 +17,7 @@ body{
     background-color: rgb(156, 18, 18);
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     height: 100vh;
     overflow-y: hidden;
@@ -59,7 +62,7 @@ body{
 
 .informacion{
     width: 100%;
-    padding: 15px;
+    padding: 5px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -67,38 +70,52 @@ body{
 }
 
 .contenedor_imagenes{
-    padding: 15px;
+    padding: 10px;
     width: 95%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 0 auto;
-    background-color: rgb(233, 108, 108);
     border-radius: 5px;
 }
 
-.contenedor_pokeNombre{
+.contenedor_pokeInfo{
     width: 50%;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgb(241, 241, 241);
+
 }
 
+
+
 .pokeNombre{
-    color: white;
+    color: black;
 }
 
 .contenedor_pokeImagen{
-    width: 50%;
+    width: 40%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
-    background-color: rgb(39, 39, 39);
     border-radius: 5px;
 
 }
+
+.contenedor_pokeImagen div{
+    background-color: rgb(241, 241, 241);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.contenedor_pokeImagen div h4{
+    margin: 0;
+    margin-top: 10px;
+}
+
 .pokeImagen{
-    width: 200px;
+    width: 190px;
     height: auto;
-    background-color: white;
-    border-radius: 50%;
 }
 
 .contenedor_graficas{
@@ -108,14 +125,35 @@ body{
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 0 auto;
-    background-color: rgb(233, 108, 108);
     border-radius: 5px;
 }
 
 
-.contenedor_grafica_uno{
+.graficas{
     width: 400px;
     height: auto;
-    background-color: white;
+    background-color: rgb(241, 241, 241);
     color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.contenedor_grafica_dos{
+    width: 700px;
+}
+
+.menu_laterar_footer{
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+}
+
+.menu_laterar_footer p{
+   color: white;
+   font-weight: bold;
+}
+
+.imagen_footer{
+    width: 50px;
+    height: auto;
 }
