@@ -84,7 +84,10 @@ body{
     border-radius: 5px;
     padding: 10px;
     background-color: rgb(241, 241, 241);
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -145,7 +148,8 @@ body{
 .menu_laterar_footer{
     display: flex;
     justify-content: space-around;
-    width: 90%;
+    width: 100%;
+    background-color: rgb(103, 12, 12);
 }
 
 .menu_laterar_footer p{
@@ -156,4 +160,66 @@ body{
 .imagen_footer{
     width: 50px;
     height: auto;
+}
+
+
+/*Alerta*/
+
+.mensaje_alerta{
+    position: fixed;
+    width: 30%;
+    margin: 0 10px;
+    padding: 10px;
+    top: 55px;
+    left: 40%;
+    margin: 0 auto;
+    background-color: rgb(197, 197, 197);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+    flex-wrap: wrap;
+    transform: scale(0);
+    transition: all 0.5s ease;
+}
+
+.mensaje_alerta_mostrar{
+    transform: scale(1);
+}
+
+.mensaje_alerta_header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+
+
+.mensaje_alerta_imagen {
+    width: 250px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    
+}
+
+.mensaje_alerta_imagen img{
+    width: 250px;
+    height: auto;
+}
+
+.mensaje_alerta_boton{
+    width: 90%;
+    text-align: right;
+    padding: 2px;
+}
+
+.boton_alert{
+    padding: 5px 20px;
+    background-color: blue;
+    color: white;
+    border: 1px solid blue;
 }
