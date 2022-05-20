@@ -232,10 +232,35 @@ body{
     border: 1px solid blue;
 }
 
+/*spinner*/
+
+.section_spinner{
+    display: none;
+}
+
+.section_spinner_ver{
+    display: block;
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.405);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner{
+    width: 150px;
+    height: auto;
+    animation: spinner 0.5s linear infinite;
+}
 
 
-
-
+@keyframes spinner {
+    0%{ transform: rotate(0);}
+    100% { transform: rotate(360deg);}
+}
 
 
 /*MODO RESPONSIVE*/

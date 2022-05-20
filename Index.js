@@ -1,4 +1,6 @@
 import grafica from './grafica.js'
+import spinner from './spinner.js'
+
 
 
 const renderizar = (pokemon, tipo , imagenFrente , imagenShiny) => {
@@ -49,13 +51,8 @@ const consultar = async () => {
         grafica(respuestaLocation , 'Region en la que se encuentra' , canvaGraficados , tipo, 'locacion', 'dos', 'bar' )
 
    } catch(e){
-      
-        let alerta = document.getElementById('mensaje_alerta')
-        let lugarMensaje = document.getElementById('alerta_mensaje')
-        alerta.classList.add('mensaje_alerta_mostrar')
-        lugarMensaje.innerHTML = `
-        <p>El pokemon <b>${pokemon}</b> no fue encontrado, por favor revise si esta escrito correctamente</p>
-        `
+        await spinner( pokemon )
+        
 
    }
   
