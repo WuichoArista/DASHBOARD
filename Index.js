@@ -70,4 +70,3 @@ let botonAlerta = document.getElementById('boton_alert')
         alerta.classList.remove('mensaje_alerta_mostrar')
     } )
 
-consultar()
