@@ -5,5 +5,8 @@ En esta ocacion desarrolle una Dashboard de Pokemon en la cual se pueden visuali
 ### Fotos
 A continuacion les dejo las fotos del proyecto:
 
-Modo PC: 
-![](./laptop.jpeg)
+Modo PC:
+![](https://github.com/Luis-Arista/PROYECTO-3-Dashboard-pokemon/blob/main/assets/laptop.jpeg?raw=true)
+
+
+`<link>` : <https://luis-arista.github.io/PROYECTO-3-Dashboard-pokemon/>
