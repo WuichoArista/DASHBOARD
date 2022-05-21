@@ -44,9 +44,13 @@ body{
 
 .buscador{
   padding: 5px; 
+  font-size: 15px;
+  text-align: center;
   width: 90%; 
   color: rgb(156, 18, 18);
   font-weight: bold;
+  outline: 8px ridge rgba(143, 111, 79, 0.6);
+  border-radius: 2rem;
 }
 
 .boton{
@@ -54,7 +58,7 @@ body{
     background-color: blue;
     color: white;
     border: 1px solid white;
-    margin: 15px 0;
+    margin: 25px 0;
 }
 
 
@@ -182,6 +186,8 @@ body{
     left: 40%;
     margin: 0 auto;
     background-color: rgb(197, 197, 197);
+    outline: 8px ridge rgba(153, 153, 153, 0.6);
+
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -229,7 +235,7 @@ body{
     padding: 5px 20px;
     background-color: blue;
     color: white;
-    border: 1px solid blue;
+    border: 1px solid white;
 }
 
 /*spinner*/
