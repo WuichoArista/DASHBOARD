@@ -12,27 +12,61 @@
     <main>
         <div class="contenedor_principal">
             <div class="menu_lateral">
-                <div class="menu_lateral_titulo">
-                    <h2>Poke Dashboard</h2>
+                <div class="menu_laterar_header">
+                    <div class="menu_lateral_titulo">
+                        <h2>Poke Dashboard</h2>
+                    </div>
+                    <div class="menu_lateral_buscador">
+                        <input placeholder="Pokemon" type="text" id="buscador" class="buscador">
+                        <button id="boton"  class="boton">Buscar</button>
+                    </div>
                 </div>
-                <div class="menu_lateral_buscador">
-                    <input placeholder="Pokemon" type="text" id="buscador" class="buscador">
-                    <button id="boton"  class="boton">Buscar</button>
+                <div class="menu_laterar_footer">
+                    <p>By: Luis Arista</p>
+                    <img class="imagen_footer" src="./assets/pokeball.png" alt="">
                 </div>
             </div>
-            <div class="informacion">
+            <div class="informacion" id="informacion">
                 <div class="contenedor_imagenes" id="contenedor_imagenes">     
                 </div>
                 <div class="contenedor_graficas" id="contenedor_graficas">
-                    <div class="contenedor_grafica_uno">
+                    <div class="contenedor_grafica_uno graficas">
                         <canvas class="grafica-Uno" id="grafica-Uno"></canvas>
+                    </div>
+                    <div class="contenedor_grafica_dos graficas">
+                        <canvas class="grafica-Dos" id="grafica-Dos"></canvas>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="mensaje_alerta" id="mensaje_alerta">
+            <div class="mensaje_alerta_header">
+                <div class="mensaje_alerta_letras">
+                    <div class="alerta_titulo">
+                        <h3>¿Quien es ese pokemon?</h3>
+                    </div>
+                    <div class="alerta_mensaje" id="alerta_mensaje">
+                    </div>
+                </div>
+                <div class="mensaje_alerta_imagen">
+                    <img src="./assets/quien es pokemon.jpg" alt="">
+                </div>
+            </div>
+            <div class="mensaje_alerta_boton">
+                <button id="boton_alert" class="boton_alert">Ok</button>
+            </div>
+        </div>
+        <section class="section_spinner " id="section_spinner">
+            <div class="contenedor_spinner">
+                <img class="spinner" src="./assets/pokeball.png" alt="">
+            </div>
+        </section>
     </main>
-    <script type = 'module' src="./index.js"></script>
+    <footer class="footer_responsive">
+            <p>By: Luis Arista</p>
+            <img class="imagen_footer" src="./assets/pokeball.png" alt="">
+    </footer>    
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script> 
-
+    <script type = 'module' src="./Index.js"></script>
 </body>
 </html>

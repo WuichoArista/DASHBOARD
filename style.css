@@ -1,10 +1,15 @@
 body{
     margin: 0;
     font-family: sans-serif;
+    
 }
 
 .contenedor_principal{
     display: flex;
+    max-width: 96rem;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    min-height: 100vh;
 }
 
 
@@ -14,9 +19,8 @@ body{
     background-color: rgb(156, 18, 18);
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
-    height: 100vh;
     overflow-y: hidden;
     min-width: 250px;
 }
@@ -40,26 +44,48 @@ body{
 
 .buscador{
   padding: 5px; 
+  font-size: 15px;
+  text-align: center;
   width: 90%; 
   color: rgb(156, 18, 18);
   font-weight: bold;
+  outline: 8px ridge rgba(143, 111, 79, 0.6);
+  border-radius: 2rem;
 }
 
 .boton{
-    padding: 5px 20px;
+    padding: 5px 25px;
     background-color: blue;
     color: white;
     border: 1px solid white;
-    margin: 15px 0;
+    margin: 25px 0;
 }
 
+
+.menu_laterar_footer{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color: rgb(103, 12, 12);
+}
+
+.menu_laterar_footer p{
+   color: white;
+   font-weight: bold;
+}
+
+.imagen_footer{
+    width: 50px;
+    height: auto;
+}
 
 
 /*datos*/
 
 .informacion{
-    width: 100%;
-    padding: 15px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 5px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -73,32 +99,49 @@ body{
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 0 auto;
-    background-color: rgb(233, 108, 108);
     border-radius: 5px;
 }
 
-.contenedor_pokeNombre{
+.contenedor_pokeInfo{
     width: 50%;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgb(241, 241, 241);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+
+
 .pokeNombre{
-    color: white;
+    color: black;
 }
 
 .contenedor_pokeImagen{
-    width: 50%;
+    width: 40%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
-    background-color: rgb(39, 39, 39);
     border-radius: 5px;
 
 }
+
+.contenedor_pokeImagen div{
+    background-color: rgb(241, 241, 241);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.contenedor_pokeImagen div h4{
+    margin: 0;
+    margin-top: 10px;
+}
+
 .pokeImagen{
-    width: 200px;
+    width: 190px;
     height: auto;
-    background-color: white;
-    border-radius: 50%;
 }
 
 .contenedor_graficas{
@@ -108,14 +151,301 @@ body{
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 0 auto;
-    background-color: rgb(233, 108, 108);
     border-radius: 5px;
 }
 
 
-.contenedor_grafica_uno{
+.graficas{
     width: 400px;
     height: auto;
-    background-color: white;
+    background-color: rgb(241, 241, 241);
     color: white;
+    border-radius: 5px;
+    padding: 5px;
 }
+
+.contenedor_grafica_dos{
+    width: 700px;
+}
+
+/*footer*/
+
+.footer_responsive{
+    display: none;
+}
+
+
+/*Alerta*/
+
+.mensaje_alerta{
+    position: fixed;
+    width: 30%;
+    margin: 0 10px;
+    padding: 10px;
+    top: 55px;
+    left: 40%;
+    margin: 0 auto;
+    background-color: rgb(197, 197, 197);
+    outline: 8px ridge rgba(153, 153, 153, 0.6);
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+    flex-wrap: wrap;
+    transform: scale(0);
+    transition: all 0.5s ease;
+}
+
+.mensaje_alerta_mostrar{
+    transform: scale(1);
+}
+
+.mensaje_alerta_header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+
+
+.mensaje_alerta_imagen {
+    width: 250px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    
+}
+
+.mensaje_alerta_imagen img{
+    width: 250px;
+    height: auto;
+}
+
+.mensaje_alerta_boton{
+    width: 90%;
+    text-align: right;
+    padding: 2px;
+}
+
+.boton_alert{
+    padding: 5px 20px;
+    background-color: blue;
+    color: white;
+    border: 1px solid white;
+}
+
+/*spinner*/
+
+.section_spinner{
+    display: none;
+}
+
+.section_spinner_ver{
+    display: block;
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.405);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner{
+    width: 150px;
+    height: auto;
+    animation: spinner 0.5s linear infinite;
+}
+
+
+@keyframes spinner {
+    0%{ transform: rotate(0);}
+    100% { transform: rotate(360deg);}
+}
+
+
+/*MODO RESPONSIVE*/
+
+@media (max-width: 1439px){
+
+
+    
+    .graficas{
+        width: 400px;
+    
+    }
+    
+    .contenedor_grafica_dos{
+        width: 600px;
+    }
+    
+
+}
+
+
+
+
+@media (max-width: 1332px){
+
+
+    
+    .graficas{
+        width: 350px;
+        
+    }
+    
+    .contenedor_grafica_dos{
+        width: 550px;
+    }
+    
+
+}
+
+@media (max-width: 1251px){
+
+
+    .graficas{
+        width: 250px;
+        
+    }
+    
+    .contenedor_grafica_dos{
+        width: 450px;
+    }
+    
+
+}
+
+@media (max-width: 1026px){
+
+    /*info*/
+
+    .contenedor_pokeInfo{
+        width: 100%;
+    }
+
+    .contenedor_pokeImagen div{
+        width: 50%;
+    }
+
+    .contenedor_pokeImagen{
+        width: 100%;   
+    
+    }
+
+
+    /*graficas*/
+    .contenedor_graficas{
+       flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .graficas{
+        margin: 15px 0 ;
+        width: 500px;
+        
+    }
+
+    .contenedor_grafica_dos{
+        width: 500px;
+    }
+
+    /*Alerta*/
+
+    .mensaje_alerta{
+        width: 50%;  
+        left:25%;
+    }
+
+}
+
+@media (max-width: 600px){
+
+    /*pagina principal*/
+
+    .contenedor_principal{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu_laterar_footer{
+        display: none;
+    }
+
+    /* seccion informacion*/
+    .contenedor_imagenes{
+        padding: 10px;
+        width: 90%;
+        
+
+    }
+
+    .pokeImagen{
+        width: 150px;
+        height: auto;
+    }
+
+    .contenedor_graficas{
+        padding: 10px;
+        width: 90%;
+       
+    }
+
+
+    .graficas{
+        margin: 15px 0 ;
+        width: 300px;
+        
+    }
+
+    .contenedor_grafica_dos{
+        width: 300px;
+    }
+
+    .footer_responsive{
+        display: flex;
+        justify-content: space-around;
+        background-color: rgb(103, 12, 12);
+        padding: 15px;
+    }
+
+
+    
+    .footer_responsive p{
+       color: white;
+       font-weight: bold;
+    }
+
+    /*Alerta*/
+
+    .mensaje_alerta{
+        width: 90%;
+        left: 10px;
+    }
+    
+}
+
+@media (max-width: 281px){
+    .graficas{
+        width: 210px;
+        
+    }
+
+    .contenedor_grafica_dos{
+        width: 210px;
+    }
+
+    /*alerta*/
+
+    .mensaje_alerta{
+        width: 90%;
+        left: 0;
+    }
+}
+

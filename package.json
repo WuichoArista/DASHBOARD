@@ -1,0 +1,19 @@
+{
+  "name": "proyecto-3-dashboard-app",
+  "version": "1.0.0",
+  "description": "Dashboard de pokemon",
+  "main": "Index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Luis-Arista/PROYECTO-3-Dashboard-pokemon.git"
+  },
+  "author": "Luis Arista",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Luis-Arista/PROYECTO-3-Dashboard-pokemon/issues"
+  },
+  "homepage": "https://github.com/Luis-Arista/PROYECTO-3-Dashboard-pokemon#readme"
+}

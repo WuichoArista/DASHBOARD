@@ -1,16 +1,22 @@
-const grafica = ( valorGrafica , pokemon , lugar , tipo ) => {
+const grafica = ( valorGrafica , titulo , lugar , tipo , tipoDatos, numero, tipoGrafica ) => {
 
-    const etiquetas = Object.values(valorGrafica).map( (item) => {return item.stat.name})
-    const converData = Object.values(valorGrafica).map( (item) => {return item.base_stat})
-   
-    console.log(tipo)
+    let etiquetas
+    let converData
 
-
+   if ( tipoDatos === 'poder'){
+     etiquetas = Object.values(valorGrafica).map( (item) => {return item.stat.name})
+     converData = Object.values(valorGrafica).map( (item) => {return item.base_stat})
+    } else if ( tipoDatos === 'locacion'){
+        etiquetas = Object.values(valorGrafica).map ( (item) => {return item.location_area.name} )
+        let  converDataLocation = Object.values(valorGrafica).map( (item) => { return item.version_details.map( (itemdos)=>{return itemdos.max_chance} )})
+        converData = Object.values(converDataLocation).map( (item) => {return item.reduce( (a , b) => { return a + b})} )
+        
+    }
 
      const dataConfig = {
         labels:etiquetas,
         datasets: [{
-            label: `Estadisticas de: ${pokemon.toUpperCase()}`,
+            label: titulo,
             backgroundColor: '#000000',
             borderColor: '#000000',
             data: converData,
@@ -27,8 +33,8 @@ const grafica = ( valorGrafica , pokemon , lugar , tipo ) => {
         dataConfig.datasets[0].backgroundColor =' rgba(192, 155, 155, 0.493)'
         dataConfig.datasets[0].borderColor =' rgba(192, 155, 155, 0.493)'
     } else if (tipo === 'water'){
-        dataConfig.datasets[0].backgroundColor =' rgba(96, 93, 210, 0.493)'
-        dataConfig.datasets[0].borderColor =' rgba(96, 93, 210, 0.493)'
+        dataConfig.datasets[0].backgroundColor =' rgba(131, 181, 255, 0.493)'
+        dataConfig.datasets[0].borderColor =' rgba(131, 181, 255, 0.493)'
     } else if (tipo === 'grass'){
         dataConfig.datasets[0].backgroundColor =' rgba(6, 134, 98, 0.493)'
         dataConfig.datasets[0].borderColor =' rgba(6, 134, 98, 0.493)'
@@ -72,7 +78,7 @@ const grafica = ( valorGrafica , pokemon , lugar , tipo ) => {
  
 
     const config = {
-        type: 'radar',
+        type: tipoGrafica,
         data: dataConfig,
         options: {
             scales: {
@@ -84,15 +90,29 @@ const grafica = ( valorGrafica , pokemon , lugar , tipo ) => {
 
     }
 
-    if (window.graficaUno) {
-        window.graficaUno.clear();
-        window.graficaUno.destroy();
+    
+    if (numero === 'uno'){
+        
+        if (window.graficaUno) {
+            window.graficaUno.clear();
+            window.graficaUno.destroy();
+        }
+    
+        window.graficaUno = new Chart(
+            lugar,
+            config
+        )
+    } else if ( numero === 'dos'){
+        if (window.graficaDos) {
+            window.graficaDos.clear();
+            window.graficaDos.destroy();
+        }
+    
+        window.graficaDos = new Chart(
+            lugar,
+            config
+        )
     }
-
-    window.graficaUno = new Chart(
-        lugar,
-        config
-    )
    
 
 }
